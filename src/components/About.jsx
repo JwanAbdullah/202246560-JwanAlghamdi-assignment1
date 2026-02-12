@@ -1,11 +1,15 @@
 import React from "react";
 
-function Header() {
+function About() {
   return (
-    <header id="home" style={styles.header}>
-      <img src="https://via.placeholder.com/140" alt="Profile" style={styles.avatar} />
+    <header id="about" style={styles.header}>
       <h1 style={styles.name}>Jwan Alghamdi</h1>
       <p style={styles.tagline}>Junior Software Engineer | AI Enthusiast</p>
+      <p style={styles.tagline}>Passionate about building innovative solutions and learning new technologies.
+      I enjoy working on AI-driven applications and developing creative projects.
+      Currently expanding my skills in web development and machine learning.
+      </p>
+
     </header>
   );
 }
@@ -29,6 +33,7 @@ const styles = {
     fontSize: "1.2rem",
     color: "#dbeafe", /* soft contrast on blue */
   },
+  
 };
 
-export default Header;
+export default About;

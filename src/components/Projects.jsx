@@ -1,10 +1,15 @@
 import React from "react";
+import aic from "../assets/images/aic.png";
+import kfupmgpt from "../assets/images/kfupm-gpt.png";
 
 function Projects() {
   const projects = [
-    { name: "Portfolio Site", link: "#" },
-    { name: "AI Club Website", link: "#" },
-    { name: "2D Unity Game", link: "#" },
+    { name: "KOMMUTE", 
+      link: "#" },
+    { name: "AI Club Website", Image: aic, link: "#" },
+    { name: "KFUPM-GPT",
+      Image: kfupmgpt,
+      link: "#" },
   ];
 
   return (
