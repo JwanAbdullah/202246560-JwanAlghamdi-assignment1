@@ -5,27 +5,37 @@ import kfupmgpt from "../assets/images/kfupm-gpt.png";
 
 function Projects() {
   const projects = [
-  { name: "KOMMUTE", image: kommute, link: "#" },
-  { name: "AI Club Website", image: aic, link: "#" },
-  { name: "KFUPM-GPT", image: kfupmgpt, link: "#" },
+  { name: "KOMMUTE", image: kommute,desc: "A smart transportation solution designed to improve student commuting efficiency" ,link: "https://www.canva.com/design/DAG_gymoKEI/mMmAOfvqPfbOOdbuFgniWw/edit" },
+  { name: "AI Club Website", image: aic,desc: "A responsive website built to manage AI Club events and showcase technical projects", link: "https://aic-kfupm.github.io/AIC/" },
+  { name: "KFUPM-GPT", image: kfupmgpt, desc: "An AI-powered assistant built to help students access academic resources and information", link: "https://github.com/HasanMajed/kfupm-chatbot.git" },
 ];
 
 
   return (
     <section id="projects" style={styles.section}>
+      <div style={styles.container}>
       <h2 style={styles.title}>Projects</h2>
       <div style={styles.grid}>
         {projects.map((proj, idx) => (
-          <a key={idx} href={proj.link} style={styles.card}>
+          <a key={idx} 
+          href={proj.link} 
+          style={styles.card} 
+          className="cardH" 
+          onClick={(e) => {
+              if (proj.link === "#") e.preventDefault();
+            }}>
           {proj.image && (
             <img
               src={proj.image}
               alt={proj.name}
               style={styles.image}
-            /> )}
-            <div>{proj.name}</div>
+            /> 
+          )}
+            <h3 style={styles.projectName}>{proj.name}</h3>
+            <p>{proj.desc}</p>
           </a>
         ))}
+        </div>
       </div>
     </section>
   );
@@ -34,12 +44,16 @@ function Projects() {
 const styles = {
   section: {
     padding: "60px 20px",
-    textAlign: "center",
   },
   title: {
     fontSize: "2rem",
     marginBottom: "30px",
     color: "#dbeafe",
+  },
+  container: {
+    maxWidth: "1100px",
+    margin: "0 auto",
+    textAlign: "center",
   },
   grid: {
     display: "flex",
@@ -59,12 +73,22 @@ const styles = {
 
   card: {
     padding: "20px 30px",
-    background: "#3f506c", // slightly different shade for contrast
+    width: "280px",
+    height: "360px",
+    background: "#3f506c", 
     borderRadius: "12px",
     color: "#fff",
     fontWeight: "bold",
     textDecoration: "none",
     transition: "transform 0.2s",
+  },
+  projectName: {
+    margin: "0 0 10px 0",
+    fontSize: "1.35rem",      // bigger
+    fontWeight: "900",        // stronger
+    letterSpacing: "0.5px",
+    textTransform: "uppercase",
+    color: "#ffffff",
   },
 };
 

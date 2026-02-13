@@ -1,17 +1,19 @@
 import React from "react";
 
 function Skills() {
-  const skills = ["React", "JavaScript", "Python", "Unity", "AI/ML", "CSS/HTML"];
+  const skills = ["React", "JavaScript", "Python", "Unity", "AI/ML", "CSS/HTML", "Git", "SQL", "Node.js", "Docker", "AWS", "pyTorch", "TensorFlow", "NLP", "Computer Vision"];
 
   return (
     <section id="skills" style={styles.section}>
+      <div style={styles.container}>
       <h2 style={styles.title}>Skills</h2>
       <div style={styles.grid}>
         {skills.map((skill, idx) => (
-          <div key={idx} style={styles.skill}>
+          <div key={idx} style={styles.skill} className="cardH">
             {skill}
           </div>
         ))}
+        </div>
       </div>
     </section>
   );
@@ -32,6 +34,11 @@ const styles = {
     justifyContent: "center",
     flexWrap: "wrap",
     gap: "15px",
+  },
+  container: {
+    maxWidth: "1100px",
+    margin: "0 auto",
+    textAlign: "center",
   },
   skill: {
     padding: "10px 20px",
