@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Contact() {
+  const [status, setStatus] = useState(""); // "" | "sent"
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus("sent");
+
+    // optional: clear the form
+    e.target.reset();
+
+    // hide message after 3 seconds
+    setTimeout(() => setStatus(""), 3000);
+  };
+
   return (
     <section id="contact" style={styles.section}>
       <h2 style={styles.title}>Contact Me</h2>
-      <form style={styles.form}>
-        <input type="text" placeholder="Your Name" required style={styles.input} />
-        <input type="email" placeholder="Your Email" required style={styles.input} />
-        <textarea placeholder="Your Message" required style={styles.textarea}></textarea>
-        <button type="submit" style={styles.button}>Send Message</button>
+
+      <form style={styles.form} onSubmit={handleSubmit}>
+        <input style={styles.input} type="text" placeholder="Your Name" required />
+        <input style={styles.input} type="email" placeholder="Your Email" required />
+        <textarea style={styles.textarea} placeholder="Your Message" required />
+
+        <button style={styles.button} type="submit">
+          Send Message
+        </button>
+
+        {status === "sent" && (
+          <div style={styles.success}>
+            ✅ Message sent! will get back to you soon.
+          </div>
+        )}
       </form>
     </section>
   );
@@ -25,7 +48,7 @@ const styles = {
     color: "#dbeafe",
   },
   form: {
-    maxWidth: "400px",
+    maxWidth: "420px",
     margin: "0 auto",
     display: "flex",
     flexDirection: "column",
@@ -44,11 +67,21 @@ const styles = {
   },
   button: {
     padding: "10px",
-    background: "#2563eb",
+    background: "#3f506c",
     color: "#fff",
     border: "none",
     borderRadius: "6px",
     cursor: "pointer",
+    fontWeight: "bold",
+  },
+  success: {
+    marginTop: "8px",
+    padding: "10px",
+    borderRadius: "8px",
+    background: "rgba(34,197,94,0.15)",
+    border: "1px solid rgba(34,197,94,0.35)",
+    color: "#dcfce7",
+    fontWeight: "600",
   },
 };
 

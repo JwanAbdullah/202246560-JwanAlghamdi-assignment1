@@ -35,7 +35,7 @@ const styles = {
   },
   skill: {
     padding: "10px 20px",
-    background: "#3b82f6", // card contrast
+    background: "#3f506c", // card contrast
     borderRadius: "8px",
     fontWeight: "bold",
     color: "#fff",

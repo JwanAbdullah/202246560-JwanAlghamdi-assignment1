@@ -1,16 +1,15 @@
 import React from "react";
+import kommute from "../assets/images/kommute.png";
 import aic from "../assets/images/aic.png";
 import kfupmgpt from "../assets/images/kfupm-gpt.png";
 
 function Projects() {
   const projects = [
-    { name: "KOMMUTE", 
-      link: "#" },
-    { name: "AI Club Website", Image: aic, link: "#" },
-    { name: "KFUPM-GPT",
-      Image: kfupmgpt,
-      link: "#" },
-  ];
+  { name: "KOMMUTE", image: kommute, link: "#" },
+  { name: "AI Club Website", image: aic, link: "#" },
+  { name: "KFUPM-GPT", image: kfupmgpt, link: "#" },
+];
+
 
   return (
     <section id="projects" style={styles.section}>
@@ -18,7 +17,13 @@ function Projects() {
       <div style={styles.grid}>
         {projects.map((proj, idx) => (
           <a key={idx} href={proj.link} style={styles.card}>
-            {proj.name}
+          {proj.image && (
+            <img
+              src={proj.image}
+              alt={proj.name}
+              style={styles.image}
+            /> )}
+            <div>{proj.name}</div>
           </a>
         ))}
       </div>
@@ -42,9 +47,19 @@ const styles = {
     flexWrap: "wrap",
     gap: "20px",
   },
+  image: {
+  width: "135px",
+  height: "135px",
+  objectFit: "contain",
+  borderRadius: "50%",   //round
+  padding: "10px",
+  margin: "0 auto 15px",
+  display: "block",
+  },
+
   card: {
     padding: "20px 30px",
-    background: "#3b82f6", // slightly different shade for contrast
+    background: "#3f506c", // slightly different shade for contrast
     borderRadius: "12px",
     color: "#fff",
     fontWeight: "bold",

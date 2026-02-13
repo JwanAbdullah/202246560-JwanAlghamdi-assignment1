@@ -39,7 +39,7 @@ const styles = {
     flexWrap: "wrap",
   },
   card: {
-    background: "#2563eb", // lighter blue card
+    background: "#3f506c", // lighter blue card
     padding: "20px 25px",
     borderRadius: "12px",
     width: "250px",
