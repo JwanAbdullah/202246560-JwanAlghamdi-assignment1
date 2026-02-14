@@ -10,23 +10,28 @@ function Experience() {
 
   return (
     <section id="experience" style={styles.section}>
-    <div style={styles.cards}>
+    <div style={styles.container}>
       <h2 style={styles.title}>Experience</h2>
+
       <div style={styles.cards}>
+        {/* render experience cards from data array*/}
         {experiences.map((exp, idx) => (
-          <div key={idx} style={styles.card} className="cardH">
+          <div key={idx} style={styles.card} className="cardH"> 
             <h3 style={styles.company}>{exp.company}</h3>
             <h4 style={styles.role}>{exp.role}</h4>
             <p style={styles.year}>{exp.year}</p>
             <p style={styles.desc}>{exp.desc}</p>
           </div>
         ))}
+
         </div>
       </div>
     </section>
   );
 }
 
+// "cards" is the container that controls how multiple cards are arranged (flex layout, spacing, wrapping).
+// "card" defines the styling of each individual card (background, padding, shadow, size).
 const styles = {
   section: {
     padding: "80px 20px",
@@ -42,44 +47,45 @@ const styles = {
     gap: "20px",
     flexWrap: "wrap",
   },
+  container: {
+    maxWidth: "1100px",
+    margin: "0 auto",
+    textAlign: "center",
+  },
   card: {
-  background: "#3f506c",
-  padding: "26px 28px",
-  borderRadius: "16px",
-  width: "320px",
-  minHeight: "220px",
-  boxShadow: "0 10px 25px rgba(0,0,0,0.35)",
-  transition: "transform 0.2s ease, box-shadow 0.2s ease",
-  color: "#fff",
-  textAlign: "center",
-},
-
-company: {
-  margin: "0 0 8px 0",
-  fontSize: "1.35rem",
-  fontWeight: "800",
-  letterSpacing: "0.2px",
-},
-
-role: {
-  margin: "0 0 12px 0",
-  fontSize: "1.05rem",
-  fontWeight: "600",
-  opacity: 0.95,
-},
-
-year: {
-  margin: "0 0 18px 0",
-  fontSize: "0.95rem",
-  opacity: 0.8,
-},
-
-desc: {
-  margin: 0,
-  fontSize: "0.98rem",
-  lineHeight: "1.6",
-  opacity: 0.95,
-},
+    background: "#3f506c",
+    padding: "26px 28px",
+    borderRadius: "16px",
+    width: "320px",
+    minHeight: "220px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.35)",
+    color: "#fff",
+    textAlign: "center",
+  },
+  company: {
+    margin: "0 0 8px 0",
+    fontSize: "1.5rem",
+    fontWeight: "800",
+    letterSpacing: "0.2px",
+    color:"#d2dae6"
+  },
+  role: {
+    margin: "0 0 12px 0",
+    fontSize: "1.2rem",
+    fontWeight: "600",
+    opacity: 0.95,
+  },
+  year: {
+    margin: "0 0 18px 0",
+    fontSize: "0.95rem",
+    opacity: 0.8,
+  },
+  desc: {
+    margin: 0,
+    fontSize: "1.1rem",
+    lineHeight: "1.6",
+    opacity: 0.95,
+  },
 
 };
 

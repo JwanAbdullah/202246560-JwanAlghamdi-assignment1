@@ -1,6 +1,8 @@
 import React from "react";
 
 function Navbar() {
+
+  {/* In-page navigation links using section IDs */}
   return (
     <nav style={styles.nav}>
       <a href="#about" style={styles.link}>About</a>

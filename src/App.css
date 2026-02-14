@@ -1,20 +1,5 @@
+/* interaction: hover lift + shadow-ish for cards/badges to improve UI  */
 
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-
-.card {
-padding: 2em;
-}
-
-.read-the-docs {
-color: #888;
-}
 .cardH {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   will-change: transform;
@@ -24,4 +9,3 @@ color: #888;
   transform: translateY(-10px) scale(1.03) !important;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5) !important;
 }
-

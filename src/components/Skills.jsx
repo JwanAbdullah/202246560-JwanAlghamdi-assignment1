@@ -1,6 +1,7 @@
 import React from "react";
 
 function Skills() {
+  // skills list rendered as badges
   const skills = ["React", "JavaScript", "Python", "Unity", "AI/ML", "CSS/HTML", "Git", "SQL", "Node.js", "Docker", "AWS", "pyTorch", "TensorFlow", "NLP", "Computer Vision"];
 
   return (

@@ -28,9 +28,42 @@ The website includes sections for About Me, Experience, Projects, Skills, and Co
 - Vite
 - JavaScript (ES6+)
 - CSS (Flexbox)
-- AI-assisted tools (ChatGPT)
+- AI-assisted tools (Claude + Copilot)
 
 ---
 
 
+## ⚙️ Setup Instructions
 
+To run this project locally:
+
+1. Clone the repository: 
+https://github.com/JwanAbdullah/202246560-JwanAlghamdi-assignment1.git
+
+2. Navigate into the project folder : 
+/portfolio
+
+3. Install dependencies:
+npm install
+
+4. Run the development server:
+npm run dev
+
+5. Open in your browser
+
+---
+
+
+## 🤖 AI Usage Summary
+
+AI tools were used occasionally during development to:
+
+- Debug layout and styling issues  
+- Improve component structure  
+- Refine project and experience descriptions  
+
+All AI-generated suggestions were reviewed, tested, and modified to ensure correctness and full understanding of the implementation.
+
+A more detailed explanation of AI usage is available in:
+
+`docs/ai-usage-report.md`

@@ -3,14 +3,13 @@ import React, { useState } from "react";
 function Contact() {
   const [status, setStatus] = useState(""); // "" | "sent"
 
+  // Front-end only: prevents page reload + shows a temporary success message.
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("sent");
-
-    // optional: clear the form
     e.target.reset();
 
-    // hide message after 3 seconds
+    // hide confirmation message after 3 seconds
     setTimeout(() => setStatus(""), 3000);
   };
 
@@ -29,7 +28,7 @@ function Contact() {
 
         {status === "sent" && (
           <div style={styles.success}>
-            ✅ Message sent! will get back to you soon.
+            Message sent! will get back to you soon.
           </div>
         )}
       </form>
