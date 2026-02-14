@@ -28,7 +28,7 @@ The website includes sections for About Me, Experience, Projects, Skills, and Co
 - Vite
 - JavaScript (ES6+)
 - CSS (Flexbox)
-- AI-assisted tools (Claude + GitHub Copilot)
+- AI-assisted tools (Claude + GitHub  Copilot)
 
 ---
 
