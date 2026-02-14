@@ -10,7 +10,7 @@ The website includes sections for About Me, Experience, Projects, Skills, and Co
 
 ---
 
-## 🚀 Features
+## Features
 
 - About Me section with introduction and tagline
 - Experience section with structured role breakdown
@@ -22,18 +22,18 @@ The website includes sections for About Me, Experience, Projects, Skills, and Co
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - React
 - Vite
 - JavaScript (ES6+)
 - CSS (Flexbox)
-- AI-assisted tools (Claude + Copilot)
+- AI-assisted tools (Claude + GitHub Copilot)
 
 ---
 
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 To run this project locally:
 
@@ -49,12 +49,12 @@ npm install
 4. Run the development server:
 npm run dev
 
-5. Open in your browser
+5. Open in your browser: http://localhost:5173/
 
 ---
 
 
-## 🤖 AI Usage Summary
+## AI Usage Summary
 
 AI tools were used occasionally during development to:
 
